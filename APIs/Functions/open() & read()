@@ -1,0 +1,2 @@
+-open() trong linux kernel được sử dụng để mở một file và trả về một file descriptor.
+-read() là một hàm trong thư viện chuẩn C được sử dụng để đọc dữ liệu từ một file descriptor đã được mở, hàm này trả về lượng số lượng byte đã đọc được hoặc một giá trị âm để báo lỗi .
