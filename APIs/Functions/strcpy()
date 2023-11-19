@@ -1,0 +1,2 @@
+-strcpy() là một hàm trong thư viện chuẩn C, dùng để sao chép một chuỗi ký tự từ một vị trí đến một vị trí khác. Hàm này sẽ sao chép toàn bộ ký tự từ vùng nhớ nguồn đến vùng nhớ đích, bao gồm cả ký tự kết thúc chuỗi.
+-Nằm trong thư viện string.h
