@@ -1,1 +1,3 @@
+-memcpy() là một hàm trong thư viện chuẩn C, dùng để sao chép một khối bộ nhớ từ một vị trí đến một vị trí khác. Hàm này sẽ sao chép số lượng byte được chỉ định từ vùng nhớ nguồn đến vùng nhớ đích, bất kể kiểu dữ liệu nào được lưu trữ. 
+-Nằm trong thư viện string.h
 
