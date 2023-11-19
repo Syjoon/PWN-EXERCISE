@@ -1,0 +1,2 @@
+-strlen() là một hàm trong thư viện chuẩn C, được sử dụng để tính độ dài của một chuỗi ký tự. Hàm này sẽ trả về số lượng ký tự trong chuỗi, không bao gồm ký tự kết thúc chuỗi.
+-Nằm trong thư viện string.h
