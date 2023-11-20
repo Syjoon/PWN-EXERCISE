@@ -3,3 +3,6 @@
 -Hàm này trả về một con trỏ tới vị trí bộ nhớ nơi dữ liệu được sao chép.
 -Nằm trong thư viện string.h
 
+Những điểm quan trọng về memcpy():
+-memcpy() không kiểm tra tràn.
+-memcpy() dẫn đến hành vi không xác định khi địa chỉ nguồn và đích trùng nhau.
