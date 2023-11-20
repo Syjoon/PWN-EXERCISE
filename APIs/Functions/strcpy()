@@ -3,3 +3,12 @@
 -Nếu bộ đệm đích nhỏ hơn src thì nó sẽ sao chép nội dung mà không kết thúc ký tự NULL. Các chuỗi không được trùng nhau và chuỗi đích phải đủ lớn để nhận được bản sao. 
 -Chuỗi src trong C là một chuỗi ký tự được khai báo như một con trỏ kiểu char.
 -Giá trị trả về: Nó trả về một con trỏ tới chuỗi đích.
+
+Độ phức tạp về thời gian : O(n)
+Không gian phụ trợ : O(1)
+
+-Sự cố với strcpy(): Hàm strcpy() không chỉ định kích thước của mảng đích, do đó việc tràn bộ đệm thường là một rủi ro. 
+-Sử dụng hàm strcpy() để sao chép một mảng ký tự lớn thành một mảng ký tự nhỏ hơn là nguy hiểm, nhưng nếu chuỗi đó vừa khít thì sẽ không đáng để mạo hiểm. 
+-Nếu chuỗi đích không đủ lớn để lưu trữ chuỗi nguồn thì hành vi của strcpy() là không xác định hoặc không xác định. 
+
+
