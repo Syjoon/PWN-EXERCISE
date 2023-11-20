@@ -2,3 +2,4 @@
 -Hàm strncpy() tương tự như hàm strcpy(), ngoại trừ việc sao chép tối đa n byte của src. 
 -Nếu không có ký tự NULL trong số n ký tự đầu tiên của src thì chuỗi được đặt trong dest sẽ không bị kết thúc bằng NULL. 
 -Nếu độ dài của src nhỏ hơn n, strncpy() ghi thêm một ký tự NULL vào dest để đảm bảo rằng tổng cộng n ký tự được ghi. 
+-Giá trị trả về: Nó trả về một con trỏ tới chuỗi đích. 
