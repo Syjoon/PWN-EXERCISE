@@ -3,3 +3,12 @@
 -Nếu không có ký tự NULL trong số n ký tự đầu tiên của src thì chuỗi được đặt trong dest sẽ không bị kết thúc bằng NULL. 
 -Nếu độ dài của src nhỏ hơn n, strncpy() ghi thêm một ký tự NULL vào dest để đảm bảo rằng tổng cộng n ký tự được ghi. 
 -Giá trị trả về: Nó trả về một con trỏ tới chuỗi đích. 
+
+Độ phức tạp về thời gian : O(n)
+Không gian phụ trợ : O(1)
+
+Sự cố với strncpy(): 
+-Nếu không có ký tự null trong số n ký tự đầu tiên của src, thì chuỗi được đặt trong dest sẽ không bị kết thúc bằng null. 
+-Vì vậy strncpy() không đảm bảo rằng chuỗi đích sẽ bị kết thúc bằng NULL. 
+-Chuỗi không kết thúc strlen() có thể gây ra lỗi segfault. 
+-Nói cách khác, một chuỗi không kết thúc trong C/C++ là một quả bom hẹn giờ chỉ chờ để phá hủy mã. 
