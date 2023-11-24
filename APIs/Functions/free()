@@ -1,0 +1,4 @@
+-free() trong C được sử dụng để phân bổ lại bộ nhớ một cách linh hoạt. 
+-Bộ nhớ được phân bổ bằng các hàm malloc() và calloc() không được tự phân bổ lại. 
+-Do đó phương thức free() được sử dụng bất cứ khi nào việc cấp phát bộ nhớ động diễn ra. 
+-Nó giúp giảm lãng phí bộ nhớ bằng cách giải phóng nó.
