@@ -20,7 +20,7 @@ int main()
     printf("src = %s\n", src); // in ra giá trị của chuỗi nguồn
     printf("x = %d\n", x); // in ra giá trị của biến x
 
-    strncpy(dest, src, 10); // sao chép 10 ký tự từ chuỗi nguồn vào mảng đích
+    strncpy(dest, src, 15); // sao chép 10 ký tự từ chuỗi nguồn vào mảng đích
 
     printf("After strncpy:\n");
     printf("dest = %s\n", dest); // in ra giá trị của mảng đích
