@@ -9,7 +9,7 @@ Most basic common C APIs:
 + write()
 + scanf()
 - mmap()
-- malloc()
++ malloc()
 + free()
 - memmove()
 - gets()
