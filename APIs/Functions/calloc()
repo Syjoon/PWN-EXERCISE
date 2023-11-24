@@ -1,0 +1,4 @@
+-Phương thức "calloc" hoặc "phân bổ liền kề" trong C được sử dụng để phân bổ động số lượng khối bộ nhớ được chỉ định thuộc loại đã chỉ định. nó rất giống với malloc() nhưng có hai điểm khác nhau và đó là:
+-Nó khởi tạo mỗi khối với giá trị mặc định là '0'.
+-Nó có hai tham số hoặc đối số để so sánh với malloc().
+-Nếu không đủ dung lượng, việc phân bổ không thành công và trả về con trỏ NULL.
