@@ -1,0 +1,4 @@
+-realloc() hoặc “re-allocation” trong C được sử dụng để thay đổi động việc cấp phát bộ nhớ của bộ nhớ được phân bổ trước đó. 
+-Nếu bộ nhớ được phân bổ trước đó với sự trợ giúp của malloc hoặc calloc không đủ, thì realloc có thể được sử dụng để phân bổ lại bộ nhớ một cách linh hoạt. 
+-Việc phân bổ lại bộ nhớ sẽ duy trì giá trị hiện tại và các khối mới sẽ được khởi tạo với giá trị rác mặc định.
+-Nếu không đủ dung lượng, việc phân bổ không thành công và trả về con trỏ NULL.
