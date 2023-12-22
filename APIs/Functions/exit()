@@ -1,0 +1,3 @@
+Hàm thoát trong c được bao gồm trong tệp tiêu đề stdlib.h . Hàm thoát chấm dứt chương trình hiện đang chạy một cách rõ ràng đã gọi nó. 
+Hàm exit() xóa tất cả các bộ đệm được chương trình sử dụng, đóng tất cả các chương trình liên kết với chương trình đang gọi nó và xóa 
+tất cả các tệp tạm thời được liên kết.
