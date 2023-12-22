@@ -1,0 +1,7 @@
+-Hàm fwrite() được sử dụng để ghi đếm các mục, mỗi mục có độ dài byte kích thước, từ bộ đệm đến luồng đầu ra.
+
+
+-Giá trị trả về từ fwrite()
++Trả về số lượng mục đầy đủ được ghi thành công, có thể ít hơn số lượng mục nếu xảy ra lỗi.
++Khi sử dụng fwrite() cho đầu ra bản ghi, hãy đặt kích thước thành 1 và đếm theo độ dài của bản ghi để thu được 
+số byte được ghi. Bạn chỉ có thể ghi một bản ghi mỗi lần khi sử dụng I/O bản ghi.
