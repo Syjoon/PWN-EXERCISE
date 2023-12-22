@@ -1,0 +1,2 @@
+-memset() được sử dụng để lấp đầy một khối bộ nhớ bằng một giá trị cụ thể.
+-Sao chép ký tự c (một char không dấu) vào n ký tự đầu tiên của chuỗi được trỏ tới, bởi đối số str .
