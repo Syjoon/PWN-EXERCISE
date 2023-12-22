@@ -1,0 +1,7 @@
+-memcmp() trả về số nguyên âm, 0 hoặc dương tùy thuộc vào việc n ký tự đầu tiên của đối tượng được trỏ tới bởi s1 nhỏ hơn, 
+bằng hay lớn hơn n ký tự đầu tiên của đối tượng được trỏ tới tới s2 .
+
+-Giá trị trả về
++Nếu giá trị trả về < 0 thì nó cho biết str1 nhỏ hơn str2.
++Nếu Giá trị trả về > 0 thì nó cho biết str2 nhỏ hơn str1.
++Nếu Giá trị trả về = 0 thì nó cho biết str1 bằng str2.
