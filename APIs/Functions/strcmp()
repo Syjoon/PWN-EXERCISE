@@ -1,0 +1,13 @@
+-strcmp() là một hàm thư viện tích hợp được sử dụng để so sánh chuỗi. Hàm này lấy hai chuỗi (mảng ký tự) làm đối số,
+so sánh hai chuỗi này theo từ điển và sau đó trả về kết quả là 0,1 hoặc -1.
+
+-Giá trị trả về của strcmp() trong C
++Hàm strcmp() trả về ba giá trị khác nhau sau khi so sánh hai chuỗi như sau:
+1. Không ( 0 )
+Giá trị bằng 0 khi cả hai chuỗi được tìm thấy giống hệt nhau. Tức là tất cả các ký tự trong cả hai chuỗi đều giống nhau.
+2. Lớn hơn 0 ( > 0 )
+Giá trị lớn hơn 0 được trả về khi ký tự không khớp đầu tiên trong first_str có giá trị ASCII lớn hơn ký tự tương ứng trong 
+Second_str hoặc chúng ta cũng có thể nói rằng nếu ký tự trong First_str theo từ điển sau ký tự của Second_str thì giá trị 0 được trả về .
+3. Nhỏ hơn 0 ( < 0 )
+Giá trị nhỏ hơn 0 được trả về khi ký tự không khớp đầu tiên trong first_str có giá trị ASCII nhỏ hơn ký tự tương ứng trong two_str .
+Chúng ta cũng có thể nói rằng nếu ký tự trong first_str có từ điển trước ký tự của two_str thì số 0 sẽ được trả về.
