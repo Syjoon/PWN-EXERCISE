@@ -1,0 +1,6 @@
+-Fread trong C đọc dữ liệu từ tệp và lưu nó vào bộ đệm. Hàm fread đọc để đếm các đối tượng vào bộ đệm mảng từ luồng đầu vào 
+được truyền trong đối số hàm. Chỉ báo vị trí tệp cho luồng đầu vào đã cho tăng dần theo số lần đọc hàm ký tự.
+
+-Khi lệnh gọi hàm thực hiện thành công, hàm fread trong C trả về một giá trị nguyên biểu thị số phần tử được đọc ( count ).
+Nếu xảy ra lỗi hoặc gặp phải EOF (giá trị của EOF là -1 và được sử dụng để biểu thị kết thúc đầu vào), hàm fread trong C trả
+về một giá trị số nguyên có giá trị nhỏ hơn count .
