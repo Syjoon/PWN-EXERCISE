@@ -1,0 +1,7 @@
+-fgets() đọc một dòng từ luồng đã chỉ định và lưu nó vào chuỗi được trỏ tới bởi str . Nó dừng khi đọc một trong hai (n-1) ký tự,
+ký tự dòng mới được đọc hoặc đạt đến cuối tệp, tùy điều kiện nào đến trước.
+
+-Giá trị trả về
++Nếu thành công, hàm trả về cùng tham số str. Nếu gặp End-of-File và không có ký tự nào được đọc, nội dung của str vẫn không thay đổi và trả về một con trỏ null.
++Nếu xảy ra lỗi, con trỏ null sẽ được trả về.
+
