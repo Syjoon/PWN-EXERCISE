@@ -1,0 +1,5 @@
+-gets()là một hàm được xác định trước trong C, được sử dụng để đọc một chuỗi hoặc một dòng văn bản.
+và lưu trữ đầu vào trong một biến chuỗi được xác định rõ. Hàm kết thúc phiên đọc của nó ngay khi gặp ký tự dòng mới .
+
+-Hàm này gets()không cung cấp cách nào để giới hạn độ dài đầu vào và nếu stdinluồng tình cờ phân phối một dòng đầu vào dài,
+gets()nó sẽ cố gắng lưu trữ các ký tự vượt quá cuối bộ đệm có sẵn. Tràn bộ đệm như vậy là một nguy cơ bảo mật tiềm ẩn.
