@@ -3,3 +3,7 @@ và lưu trữ đầu vào trong một biến chuỗi được xác định rõ.
 
 -Hàm này gets()không cung cấp cách nào để giới hạn độ dài đầu vào và nếu stdinluồng tình cờ phân phối một dòng đầu vào dài,
 gets()nó sẽ cố gắng lưu trữ các ký tự vượt quá cuối bộ đệm có sẵn. Tràn bộ đệm như vậy là một nguy cơ bảo mật tiềm ẩn.
+
+-Sâu internet đầu tiên ( Morris Internet Worm ) đã trốn thoát khoảng 30 năm trước (1988-11-02), và nó đã sử dụng gets()lỗi tràn bộ đệm như một trong những phương pháp
+lây lan từ hệ thống này sang hệ thống khác. Vấn đề cơ bản là hàm không biết bộ đệm lớn đến mức nào, vì vậy nó tiếp tục đọc cho đến khi tìm thấy dòng mới hoặc gặp EOF
+và có thể vượt quá giới hạn của bộ đệm được cung cấp.
