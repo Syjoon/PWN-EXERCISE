@@ -1,0 +1,10 @@
+-Hàm thư viện C void *memmove(void *str1, const void *str2, size_t n) sao chép n ký tự từ str2 sang str1 , 
+nhưng đối với các khối bộ nhớ chồng chéo, memmove() là một cách tiếp cận an toàn hơn memcpy().
+
+
+Nó khác với memcpy() như thế nào ? 
+-memcpy() chỉ cần sao chép từng dữ liệu từ vị trí này sang vị trí khác. Mặt khác, memmove() sao chép dữ liệu trước tiên vào bộ đệm trung gian, 
+sau đó từ bộ đệm đến đích.
+-memcpy() dẫn đến sự cố khi các chuỗi chồng lên nhau. 
+
+-Vì các địa chỉ đầu vào trùng nhau nên chương trình trên sẽ ghi đè chuỗi gốc và gây mất dữ liệu. 
