@@ -1,0 +1,17 @@
+-puts()rất hữu ích trong ngôn ngữ lập trình C để in chuỗi. Hàm này ghi các chuỗi hoặc dòng vào thiết bị xuất chuẩn, tức là luồng đầu ra. 
+Chuỗi đã truyền cho hàm đặt trong C được in cùng với một dòng mới và một giá trị số nguyên được trả về và giá trị trả về này phụ thuộc 
+vào sự thành công của việc ghi chuỗi được truyền.
+
+-Giá trị trả về của hàm put() trong C
++Kiểu trả về: int
++Hàm put() trong C trả về một giá trị nguyên không âm biểu thị việc thực hiện thành công. Nếu có bất kỳ lỗi nào trong quá trình thực thi 
+hàm put() , nó sẽ trả về lỗi EOF .
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-fputs () trong C là một phương thức và một phần của stdio , còn được gọi là luồng đầu vào-đầu ra tiêu chuẩn . Chúng ta cần bao gồm tiêu
+đề stdio.h để sử dụng phương thức fputs() trong chương trình của mình. Hàm fputs() trong C này được sử dụng để ghi chuỗi hoặc mảng ký tự trong một tệp.
+Giá trị trả về của fputs() trong C
+
+-Kiểu trả về của phương thức fputs() trong C là một số nguyên. Phương thức này trả về 0 khi thực hiện thành công. Mặt khác, phương thức fputs() trả về EOF 
+(Cuối tệp) hoặc -1 trong trường hợp có lỗi khi thực thi.
