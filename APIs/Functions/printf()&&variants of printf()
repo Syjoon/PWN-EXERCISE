@@ -1,0 +1,2 @@
+-Hàm printf() được sử dụng để in đầu ra được định dạng ra thiết bị xuất chuẩn đầu ra tiêu chuẩn (thường là màn hình bảng điều khiển).
+Hàm printf là một phần của thư viện chuẩn C < stdio.h> và nó có thể cho phép định dạng đầu ra theo nhiều cách.
