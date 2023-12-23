@@ -1,0 +1,6 @@
+-pipe() là một chức năng hệ thống Linux. Hàm hệ thống pipe() được sử dụng để mở bộ mô tả tệp, được sử dụng để giao tiếp
+giữa các quy trình Linux khác nhau. Nói tóm lại, hàm pipe() được sử dụng để liên lạc giữa các tiến trình trong Linux.
+
+-Giá trị trả về
++Nếu thành công, pipe() trả về 0, nếu thất bại hàm trả về -1.
+
