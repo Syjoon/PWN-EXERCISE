@@ -1,0 +1,7 @@
+-fork() được sử dụng để tạo quy trình mới bằng cách sao chép quy trình gọi hiện tại và quy trình mới được tạo được gọi là quy trình 
+con và quy trình gọi hiện tại được gọi là quy trình cha . Vì vậy, chúng ta có thể nói rằng fork() được sử dụng để tạo một tiến trình 
+gọi tiến trình con .
+
+-Bằng cách sử dụng hàm fork(), chúng ta có thể tạo một bản sao chính xác của quy trình gọi, hàm này trả về id tiến trình của chính nó
+và id tiến trình này được gọi là id tiến trình con và nếu chúng ta nhận được id cha của quy trình này, nó sẽ giống với id tiến trình 
+cha trong đó fork() tồn tại.
