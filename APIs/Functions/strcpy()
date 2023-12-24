@@ -10,5 +10,6 @@ Không gian phụ trợ : O(1)
 -Sự cố với strcpy(): Hàm strcpy() không chỉ định kích thước của mảng đích, do đó việc tràn bộ đệm thường là một rủi ro. 
 -Sử dụng hàm strcpy() để sao chép một mảng ký tự lớn thành một mảng ký tự nhỏ hơn là nguy hiểm, nhưng nếu chuỗi đó vừa khít thì sẽ không đáng để mạo hiểm. 
 -Nếu chuỗi đích không đủ lớn để lưu trữ chuỗi nguồn thì hành vi của strcpy() là không xác định hoặc không xác định. 
-
+-Nếu bạn không cung cấp chuỗi kết thúc bằng null, hàm sẽ tiếp tục tiếp tục, sao chép vượt quá giới hạn mảng.
+-Họ đi đến kết luận rằng đây là lỗi strcpyvì nó không kiểm tra số lượng ký tự cần sao chép. Sau đó họ liệt kê strcpylà không dùng nữa và nguy hiểm.
 
