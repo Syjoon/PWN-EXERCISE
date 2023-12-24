@@ -9,3 +9,7 @@ nhớ lân cận và gây ra hành vi không xác định, có thể bị kẻ t
 vượt quá kích thước của bộ đệm.
 -Rò rỉ bộ nhớ:  Nếu chức năng này được sử dụng để sao chép thông tin nhạy cảm, chẳng hạn như mật khẩu hoặc khóa mật mã và
 bộ nhớ không được xóa đúng cách sau khi sử dụng, kẻ tấn công có thể truy cập thông tin này bằng cách đọc bộ nhớ.
+
+-Hàm này có thể bị khai thác bởi các kỹ thuật tấn công, như buffer overflow, format string, hoặc return-oriented programming. 
+Các kỹ thuật này có thể cho phép các kẻ tấn công thực thi các mã độc, chiếm quyền kiểm soát hệ thống, hoặc thay đổi luồng thực 
+thi của chương trình.
