@@ -3,6 +3,9 @@
 -Hàm này trả về một con trỏ tới vị trí bộ nhớ nơi dữ liệu được sao chép.
 -Nằm trong thư viện string.h
 
-Những điểm quan trọng về memcpy():
--memcpy() không kiểm tra tràn.
--memcpy() dẫn đến hành vi không xác định khi địa chỉ nguồn và đích trùng nhau.
+-Lỗ hổng tràn bộ đệm : Nếu bộ đệm đích quá nhỏ để chứa dữ liệu đã sao chép, chức năng này có thể ghi đè lên các vùng bộ 
+nhớ lân cận và gây ra hành vi không xác định, có thể bị kẻ tấn công khai thác. Để tránh điều này, điều cần thiết là phải 
+đảm bảo rằng bộ đệm đích đủ lớn để chứa dữ liệu được sao chép và kiểm tra xem kích thước của dữ liệu được sao chép không 
+vượt quá kích thước của bộ đệm.
+-Rò rỉ bộ nhớ:  Nếu chức năng này được sử dụng để sao chép thông tin nhạy cảm, chẳng hạn như mật khẩu hoặc khóa mật mã và
+bộ nhớ không được xóa đúng cách sau khi sử dụng, kẻ tấn công có thể truy cập thông tin này bằng cách đọc bộ nhớ.
