@@ -7,8 +7,16 @@
 Độ phức tạp về thời gian : O(n)
 Không gian phụ trợ : O(1)
 
-Sự cố với strncpy(): 
--Nếu không có ký tự null trong số n ký tự đầu tiên của src, thì chuỗi được đặt trong dest sẽ không bị kết thúc bằng null. 
--Vì vậy strncpy() không đảm bảo rằng chuỗi đích sẽ bị kết thúc bằng NULL. 
--Chuỗi không kết thúc strlen() có thể gây ra lỗi segfault. 
+Hàm strncpy() là một hàm được sử dụng để sao chép một số lượng ký tự nhất định từ một chuỗi nguồn tới một chuỗi đích.
+Tuy nhiên, hàm này có thể gây ra những nguy hiểm bảo mật nếu không được sử dụng cẩn thận, chẳng hạn như:
+
+-Gây ra lỗi tràn bộ đệm: nếu chuỗi nguồn dài hơn chuỗi đích, hoặc nếu số lượng ký tự cần sao chép lớn hơn kích thước của chuỗi đích, hàm strncpy() 
+sẽ ghi đè lên các vùng nhớ liền kề với chuỗi đích, có thể là các biến, con trỏ, hoặc mã thực thi. Điều này có thể gây ra các lỗi nghiêm trọng, như
+tràn bộ nhớ, lỗi truy cập, hoặc thay đổi hành vi của chương trình12.
+-Không kết thúc chuỗi bằng ký tự NULL: nếu chuỗi nguồn dài hơn hoặc bằng chuỗi đích, hàm strncpy() sẽ không thêm ký tự NULL vào cuối chuỗi đích. 
+Điều này có thể gây ra các lỗi khi sử dụng các hàm xử lý chuỗi khác, như strlen(), printf(), hoặc strcat(), vì chúng sẽ không biết chuỗi đích kết 
+thúc ở đâu, và có thể đọc hoặc ghi vào các vùng nhớ không hợp lệ34.
+-Làm chậm hiệu năng: nếu chuỗi nguồn ngắn hơn chuỗi đích, hàm strncpy() sẽ điền các ký tự NULL vào các vị trí còn lại của chuỗi đích, cho đến khi 
+đủ số lượng ký tự cần sao chép. Điều này có thể làm chậm hiệu năng của chương trình, vì hàm strncpy() sẽ phải ghi nhiều byte không cần thiết vào bộ nhớ
 -Nói cách khác, một chuỗi không kết thúc trong C/C++ là một quả bom hẹn giờ chỉ chờ để phá hủy mã. 
+-Chuỗi không kết thúc strlen() có thể gây ra lỗi segfault. 
