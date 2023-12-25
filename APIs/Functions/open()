@@ -1,0 +1,8 @@
+-Một số rủi ro, nguy hiểm khi sử dụng hàm open() là:
++Hàm open() có thể gây ra lỗi mở tệp (file open error) nếu tập tin hoặc thiết bị không tồn tại, không có quyền truy cập, 
+hoặc đã đạt đến giới hạn số tệp có thể mở2. Điều này có thể dẫn đến việc không thể đọc hoặc ghi dữ liệu, gây ra lỗi chương 
+trình, hoặc mất mát dữ liệu3.
++Hàm open() có thể gây ra lỗi đọc ghi (race condition) nếu có nhiều tiến trình cùng mở cùng một tập tin hoặc thiết bị để đọc
+hoặc ghi4. Điều này có thể dẫn đến việc đọc sai dữ liệu, mất mát dữ liệu, hoặc xung đột giữa các tiến trình5.
++Hàm open() có thể gây ra lỗi xử lý dữ liệu (data corruption) nếu tập tin hoặc thiết bị bị hỏng, sai định dạng, hoặc không phù
+hợp với kiểu dữ liệu mong muốn. Điều này có thể dẫn đến việc tính toán sai, hiển thị sai, hoặc gây ra các lỗi khác.
