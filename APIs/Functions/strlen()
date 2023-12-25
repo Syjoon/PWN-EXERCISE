@@ -1,2 +1,8 @@
--strlen() là một hàm trong thư viện chuẩn C, được sử dụng để tính độ dài của một chuỗi ký tự. Hàm này sẽ trả về số lượng ký tự trong chuỗi, không bao gồm ký tự kết thúc chuỗi.
+-strlen() là một hàm trong thư viện chuẩn C, được sử dụng để tính độ dài của một chuỗi ký tự. Hàm này sẽ trả về số lượng ký tự trong chuỗi,
+không bao gồm ký tự kết thúc chuỗi.
 -Nằm trong thư viện string.h
+
+-Những rủi ro:
++Hàm strlen() chỉ hoạt động đúng nếu chuỗi ký tự có ký tự kết thúc chuỗi '\0'. Nếu không có ký tự này, hàm strlen() sẽ tiếp tục đọc bộ nhớ cho đến khi gặp ký tự '\0' hoặc gây ra lỗi tràn bộ nhớ1.
++Hàm strlen() không kiểm tra xem tham số truyền vào có phải là một chuỗi ký tự hợp lệ hay không. Nếu truyền vào một con trỏ NULL hoặc một con trỏ không trỏ đến một chuỗi ký tự, hàm strlen() sẽ gây ra lỗi truy cập bộ nhớ không hợp lệ2.
++Hàm strlen() trả về giá trị kiểu int, nhưng kiểu int có thể không đủ để chứa độ dài của một chuỗi ký tự rất dài. Nếu độ dài chuỗi ký tự vượt quá giới hạn của kiểu int, hàm strlen() sẽ trả về một giá trị sai hoặc âm3.
