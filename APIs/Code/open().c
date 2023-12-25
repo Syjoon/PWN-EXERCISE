@@ -1,6 +1,6 @@
 //Lỗi mở tệp (file open error): nếu tệp hoặc thiết bị không tồn tại, không có quyền truy cập, hoặc đã đạt đến giới hạn số 
 //tệp có thể mở, hàm open() sẽ trả về giá trị -1 và gán giá trị lỗi vào biến errno1. Điều này có thể dẫn đến việc không thể
-//đọc hoặc ghi dữ liệu, gây ra lỗi chương trình, hoặc mất mát dữ liệu2.
+//đọc hoặc ghi dữ liệu, gây ra lỗi chương trình, hoặc mất mát dữ liệu.
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -21,12 +21,12 @@ int main()
 }
 
 //Lỗi đọc ghi (race condition): nếu có nhiều tiến trình cùng mở cùng một tệp hoặc thiết bị để đọc hoặc ghi, 
-//có thể đọc sai dữ liệu, mất mát dữ liệu, hoặc xung đột giữa các tiến trình3. Để tránh lỗi này, ta có thể sử 
+//có thể đọc sai dữ liệu, mất mát dữ liệu, hoặc xung đột giữa các tiến trình. Để tránh lỗi này, ta có thể sử 
 //dụng các cờ (flags) để chỉ định chế độ mở tệp hoặc thiết bị, như O_RDONLY (chỉ đọc), O_WRONLY (chỉ ghi), 
 //O_RDWR (đọc và ghi), O_APPEND (ghi vào cuối tệp), O_CREAT (tạo tệp mới nếu không tồn tại), O_EXCL (kiểm tra 
 //xem tệp đã tồn tại hay chưa), O_TRUNC (xóa nội dung tệp cũ nếu mở để ghi), O_SYNC (đồng bộ hóa dữ liệu khi ghi),
 //O_NONBLOCK (không chặn khi đọc hoặc ghi), O_NOCTTY (không gán thiết bị làm thiết bị điều khiển), O_NOFOLLOW (không 
-//theo dõi liên kết tượng trưng), O_CLOEXEC (đóng tệp khi thực hiện lệnh exec)1. Ví dụ:
+//theo dõi liên kết tượng trưng), O_CLOEXEC (đóng tệp khi thực hiện lệnh exec):
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -74,7 +74,7 @@ int main()
 }
 
 //Lỗi xử lý dữ liệu (data corruption): nếu tệp hoặc thiết bị bị hỏng, sai định dạng, hoặc không
-//phù hợp với kiểu dữ liệu mong muốn, có thể tính toán sai, hiển thị sai, hoặc gây ra các lỗi khác4.
+//phù hợp với kiểu dữ liệu mong muốn, có thể tính toán sai, hiển thị sai, hoặc gây ra các lỗi khác.
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
