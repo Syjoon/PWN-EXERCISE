@@ -1,5 +1,5 @@
 //Lỗi tràn bộ nhớ (buffer overflow): nếu số byte đọc vào vượt quá kích thước của vùng nhớ, có thể ghi đè lên 
-//các vùng nhớ khác hoặc gây ra lỗi chương trình1.
+//các vùng nhớ khác hoặc gây ra lỗi chương trình.
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -25,7 +25,7 @@ int main()
 }
 
 //Lỗi đọc ghi (race condition): nếu có nhiều tiến trình cùng đọc hoặc ghi vào cùng một tệp hoặc thiết bị, có thể đọc sai dữ liệu,
-//mất mát dữ liệu, hoặc xung đột giữa các tiến trình2.
+//mất mát dữ liệu, hoặc xung đột giữa các tiến trình.
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -73,7 +73,7 @@ int main()
 }
 
 //Lỗi xử lý dữ liệu (data corruption): nếu dữ liệu đọc vào bị hỏng, sai định dạng, hoặc không phù hợp với kiểu dữ liệu mong muốn, 
-//có thể tính toán sai, hiển thị sai, hoặc gây ra các lỗi khác3.
+//có thể tính toán sai, hiển thị sai, hoặc gây ra các lỗi khác.
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
