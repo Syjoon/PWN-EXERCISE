@@ -1,0 +1,8 @@
+-nmap() là một hàm trong thư viện sys/mman.h của C, dùng để ánh xạ một tập tin hoặc một thiết bị vào bộ nhớ ảo của tiến trình.
+Hàm này có thể gây ra những rủi ro và nguy hiểm khi sử dụng như sau:
+
++Hàm nmap() có thể gây ra lỗi khi ánh xạ một tập tin hoặc một thiết bị không tồn tại, không được mở, hoặc không có quyền truy cập.
++Hàm nmap() có thể gây ra lỗi khi ánh xạ một tập tin hoặc một thiết bị có kích thước lớn hơn dung lượng bộ nhớ ảo có sẵn.
++Hàm nmap() có thể gây ra lỗi khi ánh xạ một tập tin hoặc một thiết bị không tương thích với kiểu dữ liệu hoặc cấu trúc của bộ nhớ.
++Hàm nmap() có thể gây ra lỗi khi ánh xạ một tập tin hoặc một thiết bị bị thay đổi, xóa, hoặc bị can thiệp bởi các tiến trình khác.
++Hàm nmap() có thể gây ra lỗi khi ánh xạ một tập tin hoặc một thiết bị có chứa mã độc, làm ảnh hưởng đến an ninh và hiệu suất của tiến trình.
