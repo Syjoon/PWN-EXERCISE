@@ -1,1 +1,8 @@
--write() dùng để ghi dữ liệu vào một file descriptor đã mở
+-write() là một hàm trong ngôn ngữ lập trình C, dùng để ghi dữ liệu vào một tập tin hoặc một thiết bị. 
+-Hàm này có thể gây ra những rủi ro và nguy hiểm khi dùng như sau:
+
++Hàm write() có thể ghi đè lên dữ liệu đã có trong tập tin, làm mất hoặc hỏng dữ liệu.
++Hàm write() có thể gây ra lỗi khi ghi vào một tập tin hoặc một thiết bị không tồn tại, không được mở, hoặc không có quyền truy cập.
++Hàm write() có thể gây ra lỗi khi ghi vào một tập tin hoặc một thiết bị đầy, không còn dung lượng trống.
++Hàm write() có thể gây ra lỗi khi ghi vào một tập tin hoặc một thiết bị không tương thích với định dạng dữ liệu.
++Hàm write() có thể gây ra lỗi khi ghi vào một tập tin hoặc một thiết bị bị ngắt kết nối, bị lỗi phần cứng, hoặc bị can thiệp bởi các tiến trình khác.
