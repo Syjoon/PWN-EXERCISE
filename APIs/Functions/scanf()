@@ -1,2 +1,9 @@
--Đọc dữ liệu đầu vào được định dạng từ stdin.
+-scanf() là một hàm trong ngôn ngữ lập trình C, dùng để đọc dữ liệu từ bàn phím hoặc từ một tập tin. 
+Hàm này có thể gây ra những rủi ro và nguy hiểm khi sử dụng như sau:
 
++Hàm scanf() có thể gây ra tràn bộ đệm (buffer overflow) nếu số lượng hoặc kích thước của dữ liệu đọc vào vượt quá khả năng chứa của biến hoặc mảng.
+Điều này có thể làm hỏng dữ liệu khác trong bộ nhớ hoặc gây ra lỗi chương trình.
++Hàm scanf() có thể gây ra lỗi khi đọc vào dữ liệu không phù hợp với định dạng mong muốn. Ví dụ, nếu định dạng là %d (số nguyên) mà dữ liệu đọc vào 
+là một chuỗi ký tự, hàm scanf() sẽ không thể chuyển đổi dữ liệu và trả về giá trị lỗi.
++Hàm scanf() có thể gây ra lỗi khi đọc vào dữ liệu có khoảng trắng. Hàm scanf() sẽ dừng đọc khi gặp ký tự khoảng trắng (space, tab, enter) và bỏ 
+qua các ký tự sau đó. Điều này có thể làm mất hoặc sai dữ liệu mong muốn.
