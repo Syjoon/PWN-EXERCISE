@@ -1,3 +1,12 @@
 -Hàm malloc() trong C được sử dụng để phân bổ kích thước byte được yêu cầu và nó trả về một con trỏ tới byte đầu tiên của bộ nhớ được phân bổ. 
 -Malloc () trong C là hàm cấp phát bộ nhớ trong thời gian chạy, do đó malloc() là một kỹ thuật cấp phát bộ nhớ động. 
 -Nó trả về một con trỏ null nếu thất bại.
+
+
+-malloc() cũng có những rủi ro và nguy hiểm:
++Giải phóng bộ nhớ sau khi sử dụng xong, bằng cách gọi hàm free() với con trỏ trả về từ hàm malloc(). Nếu không, bạn sẽ gặp hiện tượng rò rỉ 
+bộ nhớ (memory leak), làm giảm hiệu suất và ổn định của chương trình.
++Kiểm tra giá trị trả về của hàm malloc() có phải là NULL hay không. Nếu là NULL, có nghĩa là không đủ bộ nhớ để cấp phát, và bạn không nên 
+truy cập vào con trỏ đó. Nếu truy cập, bạn sẽ gặp lỗi truy cập vùng nhớ không hợp lệ (segmentation fault)1 .
++Chắc chắn rằng kích thước bộ nhớ cần cấp phát là đúng và hợp lý. Nếu thiếu kích thước, bạn sẽ lưu thiếu dữ liệu hoặc ghi đè lên vùng nhớ khác.
+Nếu thừa kích thước, bạn sẽ lãng phí bộ nhớ và làm giảm hiệu quả của chương trình.
