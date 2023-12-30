@@ -2,3 +2,10 @@
 -Bộ nhớ được phân bổ bằng các hàm malloc() và calloc() không được tự phân bổ lại. 
 -Do đó phương thức free() được sử dụng bất cứ khi nào việc cấp phát bộ nhớ động diễn ra. 
 -Nó giúp giảm lãng phí bộ nhớ bằng cách giải phóng nó.
+
+-Hàm free cũng có một số rủi ro và nguy hiểm nếu không sử dụng đúng cách, ví dụ như:
+
++Giải phóng một con trỏ không được cấp phát bộ nhớ hoặc đã được giải phóng trước đó. Điều này có thể gây ra lỗi truy cập bộ nhớ hoặc lỗi phân mảnh bộ nhớ.
++Giải phóng một con trỏ mà không gán giá trị NULL cho nó. Điều này có thể dẫn đến việc sử dụng lại một con trỏ đã được giải phóng, gọi là con trỏ treo.
++Giải phóng một con trỏ mà không giải phóng các con trỏ con của nó. Điều này có thể gây ra rò rỉ bộ nhớ, khi một phần bộ nhớ vẫn được giữ lại mà không 
+thể truy cập được.
