@@ -4,3 +4,16 @@
 -Khi lệnh gọi hàm thực hiện thành công, hàm fread trong C trả về một giá trị nguyên biểu thị số phần tử được đọc ( count ).
 Nếu xảy ra lỗi hoặc gặp phải EOF (giá trị của EOF là -1 và được sử dụng để biểu thị kết thúc đầu vào), hàm fread trong C trả
 về một giá trị số nguyên có giá trị nhỏ hơn count .
+
+-Hàm fread() cũng có một số rủi ro và nguy hiểm nếu không sử dụng đúng cách, ví dụ như:
+
++Đọc quá nhiều byte dữ liệu hơn kích thước của vùng bộ nhớ được chỉ định. Điều này có thể 
+ghi đè lên các dữ liệu quan trọng khác hoặc gây ra lỗi tràn bộ nhớ.
++Đọc một số byte dữ liệu nhỏ hơn kích thước của vùng bộ nhớ được chỉ định. Điều này có thể 
+để lại các dữ liệu cũ hoặc rác trong vùng bộ nhớ.
++Sử dụng các con trỏ không hợp lệ hoặc không được khởi tạo để truyền vào hàm fread(). Điều
+này có thể gây ra lỗi truy cập bộ nhớ hoặc lỗi con trỏ treo.
++Đọc dữ liệu từ một tập tin không tồn tại, không được mở, hoặc không được phép đọc. Điều 
+này có thể gây ra lỗi đọc tập tin hoặc lỗi hệ thống.
++Đọc dữ liệu từ một tập tin có định dạng khác với dữ liệu được đọc. Điều này có thể gây
+ra lỗi chuyển đổi dữ liệu hoặc lỗi dữ liệu sai.
