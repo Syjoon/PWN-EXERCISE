@@ -7,4 +7,10 @@ Nó khác với memcpy() như thế nào ?
 sau đó từ bộ đệm đến đích.
 -memcpy() dẫn đến sự cố khi các chuỗi chồng lên nhau. 
 
--Vì các địa chỉ đầu vào trùng nhau nên chương trình trên sẽ ghi đè chuỗi gốc và gây mất dữ liệu. 
+-Hàm memmove() cũng có một số rủi ro và nguy hiểm nếu không sử dụng đúng cách, ví dụ như:
++Sao chép quá nhiều byte dữ liệu hơn kích thước của vùng bộ nhớ đích. Điều này có thể ghi 
+đè lên các dữ liệu quan trọng khác hoặc gây ra lỗi tràn bộ nhớ.
++Sao chép một số byte dữ liệu nhỏ hơn kích thước của vùng bộ nhớ đích. Điều này có thể để 
+lại các dữ liệu cũ hoặc rác trong vùng bộ nhớ đích.
++Sử dụng các con trỏ không hợp lệ hoặc không được khởi tạo để truyền vào hàm memmove(). 
+Điều này có thể gây ra lỗi truy cập bộ nhớ hoặc lỗi con trỏ treo.
