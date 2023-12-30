@@ -1,7 +1,19 @@
--Hàm fwrite() được sử dụng để ghi đếm các mục, mỗi mục có độ dài byte kích thước, từ bộ đệm đến luồng đầu ra.
+-Hàm fwrite() là một hàm trong thư viện C chuẩn, được sử dụng để ghi dữ liệu từ một mảng vào một luồng (stream) đã cho
+-Hàm này có thể ghi nhiều loại dữ liệu khác nhau, như ký tự, số, cấu trúc, v.v
 
 
 -Giá trị trả về từ fwrite()
 +Trả về số lượng mục đầy đủ được ghi thành công, có thể ít hơn số lượng mục nếu xảy ra lỗi.
 +Khi sử dụng fwrite() cho đầu ra bản ghi, hãy đặt kích thước thành 1 và đếm theo độ dài của bản ghi để thu được 
 số byte được ghi. Bạn chỉ có thể ghi một bản ghi mỗi lần khi sử dụng I/O bản ghi.
+
+-Một số rủi ro và nguy hiểm của hàm fwrite() là:
++Nếu con trỏ ptr truyền vào hàm fwrite() không trỏ tới một mảng hợp lệ, hoặc mảng đó đã bị giải phóng bộ nhớ, 
+thì có thể xảy ra lỗi truy cập bộ nhớ không hợp lệ (invalid memory access), dẫn tới chương trình bị dừng hoặc hỏng.
++Nếu kích thước của mỗi phần tử (size) hoặc số lượng phần tử (nmemb) truyền vào hàm fwrite() không phù hợp với kích 
+thước của mảng, hoặc quá lớn so với dung lượng của luồng, thì có thể xảy ra lỗi ghi quá giới hạn (buffer overflow),
+dẫn tới mất mát hoặc sai lệch dữ liệu.
++Nếu con trỏ stream truyền vào hàm fwrite() không trỏ tới một luồng hợp lệ, hoặc luồng đó đã bị đóng, hoặc không có 
+quyền ghi, thì có thể xảy ra lỗi ghi luồng (stream write error), dẫn tới không thể ghi dữ liệu vào luồng, hoặc ghi sai luồng.
++Nếu hàm fwrite() không trả về số phần tử được ghi thành công bằng với số phần tử truyền vào, thì có thể xảy ra lỗi 
+ghi không hoàn tất (incomplete write), dẫn tới dữ liệu bị thiếu hoặc không đồng nhất.
