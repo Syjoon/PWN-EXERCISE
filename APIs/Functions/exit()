@@ -1,3 +1,10 @@
 Hàm thoát trong c được bao gồm trong tệp tiêu đề stdlib.h . Hàm thoát chấm dứt chương trình hiện đang chạy một cách rõ ràng đã gọi nó. 
 Hàm exit() xóa tất cả các bộ đệm được chương trình sử dụng, đóng tất cả các chương trình liên kết với chương trình đang gọi nó và xóa 
 tất cả các tệp tạm thời được liên kết.
+
+Hàm exit() sẽ đóng tất cả các file được mở bởi chương trình và gửi một tín hiệu SIGCHILD cho các tiến trình con. 
+Điều này có thể gây ra mất dữ liệu hoặc lỗi xử lý tiến trình.
+Hàm exit() sẽ bỏ qua các lệnh sau nó trong chương trình. Do đó, nếu có những lệnh quan trọng cần thực hiện trước
+khi kết thúc chương trình, hàm exit() sẽ làm bỏ qua chúng.
+Hàm exit() sẽ không giải phóng bộ nhớ được cấp phát động bởi chương trình. Do đó, nếu chương trình sử dụng nhiều 
+bộ nhớ động, hàm exit() sẽ gây ra rò rỉ bộ nhớ.
