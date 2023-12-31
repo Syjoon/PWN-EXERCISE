@@ -5,3 +5,4 @@ ký tự dòng mới được đọc hoặc đạt đến cuối tệp, tùy đi
 +Nếu thành công, hàm trả về cùng tham số str. Nếu gặp End-of-File và không có ký tự nào được đọc, nội dung của str vẫn không thay đổi và trả về một con trỏ null.
 +Nếu xảy ra lỗi, con trỏ null sẽ được trả về.
 
+-Hàm fgets() sẽ đọc ký tự xuống dòng (\n) nếu có và lưu vào chuỗi kết quả. Điều này có thể gây ra lỗi khi so sánh chuỗi hoặc xử lý chuỗi.
